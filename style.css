@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(243, 243, 232);
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+section {
+    scroll-margin-top: 120px
+}
+
+nav {
+    background-color: rgb(33, 32, 32);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(243, 243, 232);
+    transition: 0.3s ease;
+}
+
+nav h1 {
+    font-size: 3.25rem;
+    font-weight: lighter;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+    margin-right: auto;
+}
+
+nav h3 {
+    font-size: 1.25rem;
+    margin: 35px;
+}
+
+nav a:hover {
+    color: crimson;
+}
+
+.hero-section.active {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('hero_img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    border-radius: 25px;
+    height: 70vh;
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px auto;
+    padding: 5px;
+    position: relative;
+    opacity: 1;
+    transition: 0.5s ease;
+    transform: translateY(0);
+}
+
+
+
+.hero-section.active h1 {
+    font-size: 3rem;
+    transition: 0.7s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-section.active p {
+    font-size: 1rem;
+    width: 70%;
+    line-height: 40px;
+    opacity: 1;
+    transition: 0.9s ease;
+    transform: translateY(0);
+}
+
+.hero-section, .hero-section h1, .hero-section p {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    height: 30vh;
+    transition: 0.3s ease;
+}
+
+.about h1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about h1::after {
+    content: "";
+    height: 4px;
+    width: 100px;
+    background-color: crimson;
+    border-radius: 2px;
+    bottom: -7px;
+    position: absolute;
+}
+
+.about p {
+    font-size: 1.5rem;
+    line-height: 35px;
+    padding: 10px;
+}
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-left,
+.about-right {
+    flex: 1;
+}
+
+.about-left {
+    display: flex;
+    text-align: center;
+    padding: 5px 40px;
+}
+
+.about-right {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.about-right img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.work {
+    transition: 0.3s ease;
+
+}
+
+.work h1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.work h1::after {
+    content: "";
+    height: 4px;
+    width: 100px;
+    background-color: crimson;
+    border-radius: 2px;
+    bottom: -7px;
+    position: absolute;
+}
+
+.work-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.links {
+    background: gainsboro;
+    border: 5px solid gainsboro;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 0 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.links:hover {
+    background: rgba(220, 20, 60, 0.58);
+    border: 5px solid rgba(220, 20, 60, 0.58);
+}
+
+.work-link {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 300px;
+}
+
+.work-link h2 {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(33, 32, 32);
+}
+
+.contact {
+    transition: 0.3s ease;
+}
+
+
+.contact h1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contact h1::after {
+    content: "";
+    height: 4px;
+    width: 100px;
+    background-color: crimson;
+    border-radius: 2px;
+    bottom: -7px;
+    position: absolute;
+}
+
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.contact ul li {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: .75rem;
+    margin: 0;
+    line-height: .5;
+}
+
+.contact i {
+    color: crimson;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
